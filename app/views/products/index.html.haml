@@ -12,10 +12,7 @@
     %tr
       %td= product.name
       %td= product.price
-      %td= link_to 'Show', product
-      %td= link_to 'Edit', edit_product_path(product)
-      %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to 'Details', product      
+      %td= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), product.paypal_url(product_url(:id => product.id)) 
 
 %br
-
-= link_to 'New Product', new_product_path
